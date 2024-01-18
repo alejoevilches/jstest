@@ -6,7 +6,7 @@ export const useQuestionStore = create(persist((set) => {
   const questions = []
   const currentQuestion = 0
   const fetchQuestions = async (limit) => {
-    const res = await fetch('https://jstest-seven.vercel.app/data.json')
+    const res = await fetch('https://jsgame-alejovilches.vercel.app/data.json')
     const data = await res.json()
     const questions = data.sort(() => Math.random() - 0.5).slice(0, limit)
     set({ questions })

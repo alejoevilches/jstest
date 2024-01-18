@@ -28,7 +28,7 @@ export function Question ({ info }) {
         {info.answers.map((answer, index) => {
           return (
             <ListItem key={index} divider>
-              <ListItemButton onClick={createHandleClick(index)} sx={{ backgroundColor: getBackgroundColor(index) }} disabled={info.userSelectedAnswer != undefined}>
+              <ListItemButton onClick={createHandleClick(index)} sx={{ backgroundColor: getBackgroundColor(index) }} disabled={info.userSelectedAnswer !== undefined}>
                 <ListItemText primary={answer} sx={{ textAlign: 'center' }} />
               </ListItemButton>
             </ListItem>
